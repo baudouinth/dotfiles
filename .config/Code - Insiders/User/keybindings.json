@@ -1,0 +1,199 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+f",
+        "command": "notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.test"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "alt+[Backquote]",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+shift+[Backquote]",
+        "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+g ctrl+g",
+        "command": "git-graph.view"
+    },
+    {
+        "key": "alt+t",
+        "command": "python.runTestNode"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "-workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.terminal.resizePaneDown"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "ctrl+alt+[Equal]",
+        "command": "workbench.action.increaseViewWidth"
+    },
+    {
+        "key": "ctrl+alt+6",
+        "command": "workbench.action.decreaseViewWidth"
+    },
+    {
+        "key": "alt+m",
+        "command": "notebook.cell.changeToMarkdown",
+        "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+    },
+    {
+        "key": "m",
+        "command": "-notebook.cell.changeToMarkdown",
+        "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+    },
+    {
+        "key": "alt+c",
+        "command": "notebook.cell.changeToCode",
+        "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'markdown'"
+    },
+    {
+        "key": "y",
+        "command": "-notebook.cell.changeToCode",
+        "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'markdown'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "notebook.cell.copy",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "c",
+        "command": "-notebook.cell.copy",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "notebook.cell.cut",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "x",
+        "command": "-notebook.cell.cut",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "notebook.cell.insertCodeCellAbove",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "a",
+        "command": "-notebook.cell.insertCodeCellAbove",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "notebook.cell.insertCodeCellBelow",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "b",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "notebook.cell.paste",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "v",
+        "command": "-notebook.cell.paste",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "jupyter.notebookeditor.keybind.save",
+        "when": "config.jupyter.enableKeyboardShortcuts && config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && notebookEditorFocused && !inputFocus && !inputFocus && notebookViewType == 'jupyter-notebook' && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "s",
+        "command": "-jupyter.notebookeditor.keybind.save",
+        "when": "config.jupyter.enableKeyboardShortcuts && config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && notebookEditorFocused && !inputFocus && !inputFocus && notebookViewType == 'jupyter-notebook' && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "jupyter.notebookeditor.keybind.undo",
+        "when": "config.jupyter.enableKeyboardShortcuts && config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && notebookEditorFocused && !inputFocus && !inputFocus && notebookViewType == 'jupyter-notebook' && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "z",
+        "command": "-jupyter.notebookeditor.keybind.undo",
+        "when": "config.jupyter.enableKeyboardShortcuts && config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && notebookEditorFocused && !inputFocus && !inputFocus && notebookViewType == 'jupyter-notebook' && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "list.focusDown",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "j",
+        "command": "-list.focusDown",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "list.focusUp",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "k",
+        "command": "-list.focusUp",
+        "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
+    }
+]

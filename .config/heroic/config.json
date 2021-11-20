@@ -1,0 +1,35 @@
+{
+  "defaultSettings": {
+    "altLegendaryBin": "",
+    "addDesktopShortcuts": false,
+    "addStartMenuShortcuts": false,
+    "audioFix": false,
+    "autoInstallDxvk": true,
+    "checkForUpdatesOnStartup": true,
+    "customWinePaths": [],
+    "darkTrayIcon": false,
+    "defaultInstallPath": "/home/baudouin/Games/Heroic",
+    "discordRPC": false,
+    "egsLinkedPath": "",
+    "enableEsync": false,
+    "enableFsync": false,
+    "exitToTray": false,
+    "language": "en",
+    "maxRecentGames": 5,
+    "maxWorkers": 0,
+    "nvidiaPrime": false,
+    "offlineMode": false,
+    "otherOptions": "",
+    "showFps": false,
+    "showMangohud": false,
+    "startInTray": false,
+    "useGameMode": false,
+    "wineCrossoverBottle": "Heroic",
+    "winePrefix": "/home/baudouin/.wine",
+    "wineVersion": {
+      "bin": "'/usr/share/steam/compatibilitytools.d/proton-ge-custom/proton'",
+      "name": "Proton - proton-ge-custom"
+    }
+  },
+  "version": "v0"
+}

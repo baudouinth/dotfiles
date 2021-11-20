@@ -1,0 +1,34 @@
+#!/bin/fish
+
+if test (count $argv) -gt 1
+    echo "At most one argument allowed: python main version (e.g. 3.9)"
+    exit 2
+end
+
+set pyversion $argv[1]
+
+if test -z "$pyversion"
+    set allversion (string split "." (string split " " (python --version))[2]) &&
+    set pyversion "$allversion[1].$allversion[2]"
+end &&
+
+set path "/usr/lib/python$pyversion/_sitebuiltins.py"
+
+set to_comment "return 'Use %s() or %s to exit' % (self.name, self.eof)"
+set new_line "return self.__call__()"
+set indent (string repeat -n8 " ")
+
+set substitution "s|\Q$indent$to_comment\E|$indent# $to_comment\n$indent$new_line|"
+set file_content (perl -pe "$substitution" "$path")
+
+if test -z "$file_content"
+    echo "Patching failed"
+    exit 1
+end
+
+for line in $file_content
+    echo "$line"
+end | sudo dd of="$path" 2> /dev/null &&
+
+echo "Successfully patched python$pyversion console quitter."
+echo "Typing `>>> exit` instead of `>>> exit()` will now suffice."
