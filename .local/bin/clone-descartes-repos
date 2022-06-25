@@ -1,0 +1,41 @@
+#!/bin/fish
+
+set REPO_FOLDER "$HOME/repo"
+set REQ_FILE "$REPO_FOLDER/requirements.txt"
+set UTILS "scripts/utils"
+
+function download_gear_utils
+    set old_pwd (pwd)
+    cd "$HOME/bin"
+    git clone --no-checkout --depth=1 --no-tags git@gitlab.com:descartes-underwriting/devops/cicd/gear
+    cd gear
+    git restore --staged "$UTILS"
+    git checkout "$UTILS"
+    if [ -d ../scripts ]
+        rm -rf ../scripts
+    end
+    mv scripts ../
+    cd ..
+    rm -rf gear
+    cd $old_pwd
+end
+
+function clone -a repo
+    SUBMODULE_FOLDER="$HOME/bin" bash -c "source $HOME/bin/$UTILS/git.sh; _git_clone $repo"
+end
+
+function clone_all
+    set old_pwd (pwd)
+    cd "$REPO_FOLDER"
+    for repo in (cat $REQ_FILE)
+        if [ ! -d "$repo" ]
+            clone "$repo"
+            mv "repositories/$repo" ./
+        end
+    end
+    rm -rf repositories
+    cd "$old_pwd"
+end
+
+download_gear_utils
+clone_all

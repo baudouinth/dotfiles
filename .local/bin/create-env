@@ -1,6 +1,4 @@
 #!/bin/bash
 
 ENV_NAME=${PWD##*/}-env
-
-python -m venv $ENV_NAME
-cp ~/.config/pip.conf ./$ENV_NAME/pip.conf
+virtualenv --python=/usr/bin/python3.9 "$ENV_NAME"

@@ -1,5 +1,11 @@
-#!/bin/bash
+#!/bin/fish
 
-rclone mount DC: DC &
-rclone mount GCS: GCS &
+set remotes DC GCS
+set root_folder $HOME
+
+for remote in $remotes
+    set mountpoint "$root_folder/$remote"
+    fusermount -uz $mountpoint
+    rclone mount "$remote": "$mountpoint" &
+end
 

@@ -35,7 +35,7 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "alt+[Backquote]",
+        "key": "ctrl+[Backquote]",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
@@ -55,7 +55,7 @@
         "command": "python.runTestNode"
     },
     {
-        "key": "ctrl+k ctrl+s",
+        "key": "alt+s",
         "command": "workbench.action.files.saveWithoutFormatting"
     },
     {
@@ -63,7 +63,7 @@
         "command": "-workbench.action.files.saveWithoutFormatting"
     },
     {
-        "key": "ctrl+k s",
+        "key": "ctrl+k ctrl+s",
         "command": "workbench.action.openGlobalKeybindings"
     },
     {
@@ -195,5 +195,35 @@
         "key": "k",
         "command": "-list.focusUp",
         "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
-    }
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.reloadWindow",
+        "when": ""
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+o ctrl+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "alt+enter",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
 ]

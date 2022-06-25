@@ -1,0 +1,37 @@
+#!/bin/python
+
+import sys
+from pathlib import Path
+from configparser import RawConfigParser
+
+app_path = Path("/usr/share/applications")
+user_app_path = Path.home() / ".local/share/applications"
+user_app_path.mkdir(exist_ok=True, parents=True)
+
+
+def create_prime_launcher(name: str):
+    old_file = app_path / (name + ".desktop")
+
+    if not old_file.is_file():
+        raise IOError(f"Could not find {old_file}")
+
+    config = RawConfigParser(interpolation=None)
+    config.optionxform = lambda key: key
+    config.read(old_file)
+    entry = config["Desktop Entry"]
+    entry["Name"] = entry["Name"] + " - Prime"
+    entry["Exec"] = "/usr/bin/prime-run " + entry["Exec"]
+
+    new_file = user_app_path / (name + "-prime.desktop")
+    with open(new_file, "w") as fp:
+        config.write(fp)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        raise ValueError("Expected at least one application name.")
+
+    names = sys.argv[1:]
+
+    for name in names:
+        create_prime_launcher(name)

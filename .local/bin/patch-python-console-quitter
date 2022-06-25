@@ -31,4 +31,4 @@ for line in $file_content
 end | sudo dd of="$path" 2> /dev/null &&
 
 echo "Successfully patched python$pyversion console quitter."
-echo "Typing `>>> exit` instead of `>>> exit()` will now suffice."
+echo "Typing `exit` instead of `exit()` will now suffice."

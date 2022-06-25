@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+from configparser import RawConfigParser
+from pathlib import Path
+import shlex
+import sys
+
+ROOT_PATH = Path("/usr/share/applications")
+USER_PATH = Path.home() / ".local/share/applications"
+OPTIONS = ("--enable-features=UseOzonePlatform", "--ozone-platform=wayland")
+
+
+def ozonize_app(app: str) -> None:
+    filename = app + ".desktop"
+    old_file = ROOT_PATH / filename
+    if not old_file.is_file():
+        raise IOError(f"Could not find {old_file}")
+
+    config = RawConfigParser(interpolation=None)
+    config.optionxform = lambda key: key
+    config.read(old_file)
+    entry = config["Desktop Entry"]
+
+    exec_list = shlex.split(entry["Exec"])
+    for option in OPTIONS[::-1]:
+        if option not in exec_list:
+            exec_list.insert(1, option)
+    entry["Exec"] = shlex.join(exec_list)
+
+    new_file = USER_PATH / filename
+    with open(new_file, "w") as fp:
+        config.write(fp)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        raise ValueError("Expected at least one application name.")
+
+    apps = sys.argv[1:]
+    for app in apps:
+        ozonize_app(app)
