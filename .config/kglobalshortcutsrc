@@ -10,11 +10,6 @@ Switch keyboard layout to French=none,none,Switch keyboard layout to French
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
-[code-wayland.desktop]
-_k_friendly_name=Code - wayland
-_launch=Meta+C,none,Code - wayland
-new-empty-window=none,none,New Empty Window
-
 [deezer.desktop]
 _k_friendly_name=Deezer
 _launch=Meta+M,none,Deezer
@@ -32,7 +27,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [kded5]
@@ -76,7 +71,7 @@ Increase Opacity=none,,Increase Opacity of Active Window by 5 %
 Invert=Meta+Ctrl+I,Meta+Ctrl+I,Toggle Invert Effect
 Invert Screen Colors=none,,Invert Screen Colors
 InvertWindow=Meta+Ctrl+U,Meta+Ctrl+U,Toggle Invert Effect on Window
-Kill Window=Ctrl+Alt+Esc,Meta+Ctrl+Esc,Kill Window
+Kill Window=Meta+Shift+K,Meta+Ctrl+Esc,Kill Window
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,Meta+Ctrl+Down,Move Down
@@ -286,9 +281,14 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 103=none,none,Activate Application Launcher Widget
+activate widget 108=none,none,Activate Task Manager Widget
+activate widget 113=none,none,Activate Application Launcher Widget
 activate widget 126=none,none,Activate Application Launcher Widget
+activate widget 135=none,none,Activate Task Manager Widget
+activate widget 137=none,none,Activate Application Launcher Widget
 activate widget 145=none,none,Activate Task Manager Widget
 activate widget 147=none,none,Activate Application Launcher Widget
+activate widget 159=none,none,Activate Task Manager Widget
 activate widget 165=none,none,Activate Task Manager Widget
 activate widget 170=none,none,Activate Application Launcher Widget
 activate widget 188=none,none,Activate Task Manager Widget
@@ -311,6 +311,7 @@ activate widget 64=none,none,Activate Application Launcher Widget
 activate widget 73=none,none,Activate Task Manager Widget
 activate widget 81=Alt+F1,none,Activate Application Launcher Widget
 activate widget 84=none,none,Activate Application Launcher Widget
+activate widget 87=none,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -347,6 +348,11 @@ _launch=Meta+Shift+S,none,Slack
 [systemsettings.desktop]
 _k_friendly_name=System Settings
 _launch=Meta+Shift+X,Tools,System Settings
+
+[visual-studio-code.desktop]
+_k_friendly_name=Visual Studio Code
+_launch=Meta+C,none,Visual Studio Code
+new-empty-window=none,none,New Empty Window
 
 [yakuake]
 _k_friendly_name=Yakuake

@@ -22,6 +22,6 @@ end
 
 set activate_path "$env_path/bin/activate.fish"
 if test -f $activate_path
-  [ -n "$_OLD_FISH_PROMPT_OVERRIDE" ] && functions -c fish_prompt _old_fish_prompt
+  # [ -n "$_OLD_FISH_PROMPT_OVERRIDE" ] && functions -c fish_prompt _old_fish_prompt
   source $activate_path
 end

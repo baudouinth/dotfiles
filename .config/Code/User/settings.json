@@ -20,6 +20,10 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+    },
     "autoDocstring.docstringFormat": "numpy",
     "editor.suggestSelection": "first",
     "python.languageServer": "Pylance",
@@ -119,4 +123,6 @@
         "sml": "cd $dir && sml $fileName"
     },
     "window.menuBarVisibility": "toggle",
+    "python.linting.mypyEnabled": true,
+    "notebook.output.textLineLimit": 10000,
 }

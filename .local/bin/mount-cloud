@@ -1,5 +1,10 @@
 #!/bin/fish
 
+if [ -z $MOUNT_CLOUD ]
+    echo 'Not mounting anything as $MOUNT_CLOUD is not set'
+    exit 0
+end
+
 set remotes DC GCS
 set root_folder $HOME
 
@@ -8,4 +13,3 @@ for remote in $remotes
     fusermount -uz $mountpoint
     rclone mount "$remote": "$mountpoint" &
 end
-

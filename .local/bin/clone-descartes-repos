@@ -4,10 +4,14 @@ set REPO_FOLDER "$HOME/repo"
 set REQ_FILE "$REPO_FOLDER/requirements.txt"
 set UTILS "scripts/utils"
 
+set -x GITLAB_HOST gitlab.descartesunderwriting.com
+set -x SUBMODULE_FOLDER "$HOME/bin"
+
 function download_gear_utils
     set old_pwd (pwd)
     cd "$HOME/bin"
-    git clone --no-checkout --depth=1 --no-tags git@gitlab.com:descartes-underwriting/devops/cicd/gear
+    git clone --no-checkout --depth=1 --no-tags\
+    	git@$GITLAB_HOST:descartes-underwriting/devops/cicd/gear
     cd gear
     git restore --staged "$UTILS"
     git checkout "$UTILS"
@@ -21,13 +25,19 @@ function download_gear_utils
 end
 
 function clone -a repo
-    SUBMODULE_FOLDER="$HOME/bin" bash -c "source $HOME/bin/$UTILS/git.sh; _git_clone $repo"
+    set arg  "\
+        SUBMODULE_FOLDER=$HOME/bin\
+        GITLAB_LOCAL_TOKEN=$GITLAB_API_TOKEN\
+        GITLAB_HOST=gitlab.descartesunderwriting.com\
+        GROUP_ID=4"
+    bash -c "$arg source $HOME/bin/$UTILS/git.sh; $arg _git_clone $repo"
 end
 
 function clone_all
     set old_pwd (pwd)
     cd "$REPO_FOLDER"
     for repo in (cat $REQ_FILE)
+    	[ -z "$repo" ] && continue
         if [ ! -d "$repo" ]
             clone "$repo"
             mv "repositories/$repo" ./
