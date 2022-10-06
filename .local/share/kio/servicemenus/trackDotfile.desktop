@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+MimeType=text/plain
+Actions=trackDotfile
+
+[Desktop Action trackDotfile]
+Name=Track dotfile with git
+Icon=git
+Exec=/bin/fish -c 'dotfiles-git add "%u"'

@@ -125,4 +125,6 @@
     "window.menuBarVisibility": "toggle",
     "python.linting.mypyEnabled": true,
     "notebook.output.textLineLimit": 10000,
+    "editor.inlayHints.enabled": "off",
+    "debug.onTaskErrors": "showErrors",
 }
