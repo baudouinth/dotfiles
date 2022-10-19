@@ -197,9 +197,8 @@
         "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookViewType == 'jupyter-notebook'"
     },
     {
-        "key": "ctrl+r",
-        "command": "workbench.action.reloadWindow",
-        "when": ""
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.reloadWindow"
     },
     {
         "key": "ctrl+r",
@@ -211,11 +210,31 @@
         "command": "python.execInTerminal"
     },
     {
-        "key": "ctrl+m",
+        "key": "ctrl+r",
         "command": "code-runner.run"
     },
     {
         "key": "ctrl+alt+n",
         "command": "-code-runner.run"
+    },
+    {
+        "key": "ctrl+k ctrl+p",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+m",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
     },
 ]
