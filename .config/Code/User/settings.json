@@ -44,9 +44,9 @@
         "**/data/**": true
     },
     "[python]": {
-        "editor.rulers": [
-            88
-        ]
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
     },
     "latex-utilities.message.update.show": false,
     "latex-workshop.message.update.show": false,
@@ -59,10 +59,10 @@
     "git.terminalAuthentication": false,
     "http.proxyAuthorization": null,
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.fontFamily": "'Fira Code', 'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Fira Code', 'Hack', 'Droid Sans Mono', 'monospace', 'FontAwesome'",
     "git.autofetch": true,
     "git.confirmSync": false,
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "Monokai Night",
     "vsicons.dontShowNewVersionMessage": true,
     "git.ignoredRepositories": [
         "gear"
@@ -74,4 +74,7 @@
     "editor.inlayHints.enabled": "off",
     "debug.onTaskErrors": "showErrors",
     "pandoc.pdfOptString": "--pdf-engine=xelatex",
+    "python.analysis.autoImportCompletions": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
 }

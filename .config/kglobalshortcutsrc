@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-13d27f54-ad45-4dd2-9764-6b19c8c5fa9d=none,none,Switch to activity "Default"
+switch-to-activity-c724bc0b-6cf3-47ce-9abf-070cf2f4c805=none,none,Switch to activity "Default"
 switch-to-activity-f4270f5f-5631-491f-acfd-b73c2e982ff3=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -10,13 +11,18 @@ Switch keyboard layout to French=none,none,Switch keyboard layout to French
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[code.desktop]
+_k_friendly_name=Visual Studio Code
+_launch=Meta+C,none,Visual Studio Code
+new-empty-window=none,none,New Empty Window
+
 [deezer.desktop]
 _k_friendly_name=Deezer
 _launch=Meta+M,none,Deezer
 
 [firefox.desktop]
 _k_friendly_name=Firefox
-_launch=Meta+B,none,Firefox
+_launch=Meta+S,none,Firefox
 new-private-window=none,none,Nouvelle fenêtre de navigation privée
 new-window=none,none,Nouvelle fenêtre
 
@@ -37,9 +43,9 @@ display=Meta+Shift+P\tDisplay,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
+{833084d2-af31-44a8-950e-bac4ef9d4784}=Monitor Brightness Down,none,Brightness down
+{ab54b2e2-1046-4174-8ed6-c5aede61a482}=Monitor Brightness Up,none,Brightness up
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
-{db7e4471-b797-4c59-8c9a-f7d8a78f03ec}=Monitor Brightness Up,none,Brightness up
-{f8d0fb3a-852c-4ab2-ab42-585ceaf0e5ed}=Monitor Brightness Down,none,Brightness down
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -75,10 +81,10 @@ InvertWindow=Meta+Ctrl+U,Meta+Ctrl+U,Toggle Invert Effect on Window
 Kill Window=Meta+Shift+K,Meta+Ctrl+Esc,Kill Window
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
-MoveZoomDown=none,Meta+Ctrl+Down,Move Down
-MoveZoomLeft=none,Meta+Ctrl+Left,Move Left
-MoveZoomRight=none,Meta+Ctrl+Right,Move Right
-MoveZoomUp=none,Meta+Ctrl+Up,Move Up
+MoveZoomDown=none,none,Move Zoomed Area Downwards
+MoveZoomLeft=none,none,Move Zoomed Area to Left
+MoveZoomRight=none,none,Move Zoomed Area to Right
+MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=none,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
@@ -116,14 +122,14 @@ Switch to Next Desktop=none,,Switch to Next Desktop
 Switch to Next Screen=none,,Switch to Next Screen
 Switch to Previous Desktop=none,,Switch to Previous Desktop
 Switch to Previous Screen=none,,Switch to Previous Screen
-Switch to Screen 0=none,none,Switch to Screen 0
-Switch to Screen 1=none,none,Switch to Screen 1
-Switch to Screen 2=none,none,Switch to Screen 2
-Switch to Screen 3=none,none,Switch to Screen 3
-Switch to Screen 4=none,none,Switch to Screen 4
-Switch to Screen 5=none,none,Switch to Screen 5
-Switch to Screen 6=none,none,Switch to Screen 6
-Switch to Screen 7=none,none,Switch to Screen 7
+Switch to Screen 0=none,,Switch to Screen 0
+Switch to Screen 1=none,,Switch to Screen 1
+Switch to Screen 2=none,,Switch to Screen 2
+Switch to Screen 3=none,,Switch to Screen 3
+Switch to Screen 4=none,,Switch to Screen 4
+Switch to Screen 5=none,,Switch to Screen 5
+Switch to Screen 6=none,,Switch to Screen 6
+Switch to Screen 7=none,,Switch to Screen 7
 Toggle Night Color=none,none,Toggle Night Color
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 Walk Through Desktop List=none,,Walk Through Desktop List
@@ -200,17 +206,17 @@ Window to Next Screen=Meta+Shift+Right,Meta+Shift+Right,Window to Next Screen
 Window to Previous Desktop=none,,Window to Previous Desktop
 Window to Previous Screen=Meta+Shift+Left,Meta+Shift+Left,Window to Previous Screen
 Window to Screen %1=none,none,Switch to Screen 7
-Window to Screen 0=none,,Switch to Screen 0
-Window to Screen 1=none,,Switch to Screen 1
-Window to Screen 2=none,,Switch to Screen 2
-Window to Screen 3=none,,Switch to Screen 3
-Window to Screen 4=none,,Switch to Screen 4
-Window to Screen 5=none,,Switch to Screen 5
-Window to Screen 6=none,,Switch to Screen 6
-Window to Screen 7=none,,Switch to Screen 7
+Window to Screen 0=none,,Window to Screen 0
+Window to Screen 1=none,,Window to Screen 1
+Window to Screen 2=none,,Window to Screen 2
+Window to Screen 3=none,,Window to Screen 3
+Window to Screen 4=none,,Window to Screen 4
+Window to Screen 5=none,,Window to Screen 5
+Window to Screen 6=none,,Window to Screen 6
+Window to Screen 7=none,,Window to Screen 7
 _k_friendly_name=KWin
-view_actual_size=none,Meta+0,Actual Size
-view_zoom_in=none,Meta+=,Zoom In
+view_actual_size=none,Meta+0,Zoom to Actual Size
+view_zoom_in=none,Meta++,Zoom In
 view_zoom_out=none,Meta+-,Zoom Out
 
 [mediacontrol]
@@ -220,8 +226,8 @@ mediavolumeup=none,none,Media volume up
 nextmedia=Meta+N\tMedia Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
 playmedia=none,none,Play media playback
-playpausemedia=Media Play,Media Play,Play/Pause media playback
-previousmedia=Media Previous\tMeta+P,Media Previous,Media playback previous
+playpausemedia=Media Play\tLaunch (3),Media Play,Play/Pause media playback
+previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.kde.dolphin.desktop]
@@ -282,38 +288,8 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 103=none,none,Activate Application Launcher Widget
-activate widget 108=none,none,Activate Task Manager Widget
-activate widget 113=none,none,Activate Application Launcher Widget
-activate widget 126=none,none,Activate Application Launcher Widget
-activate widget 135=none,none,Activate Task Manager Widget
-activate widget 137=none,none,Activate Application Launcher Widget
-activate widget 145=none,none,Activate Task Manager Widget
-activate widget 147=none,none,Activate Application Launcher Widget
-activate widget 159=none,none,Activate Task Manager Widget
-activate widget 165=none,none,Activate Task Manager Widget
-activate widget 170=none,none,Activate Application Launcher Widget
-activate widget 188=none,none,Activate Task Manager Widget
-activate widget 192=none,none,Activate Application Launcher Widget
-activate widget 2=none,none,Activate Application Launcher Widget
-activate widget 21=none,none,Activate Task Manager Widget
-activate widget 211=none,none,Activate Task Manager Widget
-activate widget 213=none,none,Activate Application Launcher Widget
-activate widget 23=none,none,Activate Task Manager Widget
-activate widget 232=none,none,Activate Task Manager Widget
-activate widget 245=none,none,Activate Application Launcher Widget
-activate widget 26=none,none,Activate Application Launcher Widget
-activate widget 265=none,none,Activate Task Manager Widget
-activate widget 269=none,none,Activate Application Launcher Widget
-activate widget 289=none,none,Activate Task Manager Widget
-activate widget 45=none,none,Activate Application Launcher Widget
-activate widget 50=none,none,Activate Task Manager Widget
-activate widget 52=none,none,Activate Application Launcher Widget
-activate widget 64=none,none,Activate Application Launcher Widget
-activate widget 73=none,none,Activate Task Manager Widget
-activate widget 81=Alt+F1,none,Activate Application Launcher Widget
-activate widget 84=none,none,Activate Application Launcher Widget
-activate widget 87=none,none,Activate Application Launcher Widget
+activate widget 25=none,none,Activate Task Manager Widget
+activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -335,11 +311,11 @@ toggle do not disturb=none,,Toggle do not disturb
 [plasmawindowed]
 _k_friendly_name=plasmawindowed
 clear-history=none,none,Clear Clipboard History
-clipboard_action=none,Ctrl+Alt+X,Enable Clipboard Actions
+clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycleNextAction=none,none,Next History Item
 cyclePrevAction=none,none,Previous History Item
 edit_clipboard=none,none,Edit Contents…
-repeat_action=none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
+repeat_action=Meta+Ctrl+R,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show-barcode=none,none,Show Barcode…
 show-on-mouse-pos=Meta+V,Meta+V,Open Klipper at Mouse Position
 
@@ -350,11 +326,6 @@ _launch=Meta+Shift+S,none,Slack
 [systemsettings.desktop]
 _k_friendly_name=System Settings
 _launch=Meta+Shift+X,Tools,System Settings
-
-[visual-studio-code.desktop]
-_k_friendly_name=Visual Studio Code
-_launch=Meta+C,none,Visual Studio Code
-new-empty-window=none,none,New Empty Window
 
 [yakuake]
 _k_friendly_name=Yakuake

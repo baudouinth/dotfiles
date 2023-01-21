@@ -26,38 +26,23 @@ set fish_color_command yellow
 set fish_color_param "#55ffff"
 set fish_prompt_pwd_dir_length 0
 
-# function find -w find
-#     /bin/find $argv -type d \( -name proc \) -prune
-# end
-
-# set -gx FZF_DEFAULT_COMMAND 'find . -printf "%P\\n"'
-
 alias apt="apt --aur-helper=yay"
 alias dotfiles-git="/usr/bin/git --git-dir=$HOME/.dotfiles_git/ --work-tree=$HOME"
-alias activate-env=". $HOME/.local/bin/activate-env.fish"
-alias creactivate-env="create-env && activate-env"
-alias lord=". $HOME/.venv/lord/bin/activate.fish"
-
-activate-env
 
 if status --is-login
-    bass source /etc/profile
-    bass source /etc/profile.d/*.sh
+    # bass source /etc/profile
+    # bass source /etc/profile.d/*.sh
 
     set -gx XDG_CONFIG_HOME "$HOME/.config"
     set -gx XDG_CACHE_HOME "$HOME/.cache"
     set -gx XDG_DATA_HOME "$HOME/.local/share"
     set -gx XDG_STATE_HOME "$HOME/.local/state"
 
-    set -gx MOZ_ENABLE_WAYLAND 1
+    set -gx XKB_DEFAULT_LAYOUT fr
+    set -gx XKB_DEFAULT_VARIANT latin1
 
     set -gx EDITOR nvim
     set -gx AUR_HELPER yay
 
-    # set -gx MOUNT_CLOUD
-    set -gx AUTH_PATH "$HOME/.auth"
-    set -gx GOOGLE_APPLICATION_CREDENTIALS "$AUTH_PATH/google.json"
-    set -gx GITLAB_API_TOKEN (cat "$AUTH_PATH/gitlab_api_token")
+    # set -gx LC_ALL en_US.UTF-8
 end
-
-thefuck --alias | source
