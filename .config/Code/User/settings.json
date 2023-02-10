@@ -1,6 +1,6 @@
 {
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook",
+        "*.ipynb": "jupyter-notebook"
     },
     "jupyter.askForKernelRestart": false,
     "explorer.confirmDragAndDrop": false,
@@ -22,7 +22,7 @@
     },
     "[rust]": {
         "editor.formatOnSave": true,
-        "editor.formatOnType": true,
+        "editor.formatOnType": true
     },
     "autoDocstring.docstringFormat": "numpy",
     "editor.suggestSelection": "first",

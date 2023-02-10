@@ -20,14 +20,20 @@ function fish_user_key_bindings
     bind \e\[3\;5~ kill-word
 end
 
-fish_add_path $HOME/.local/bin/
+fish_add_path $HOME/.local/bin/ $HOME/.sonar-scanner/bin/
+
 set fish_greeting
 set fish_color_command yellow
 set fish_color_param "#55ffff"
 set fish_prompt_pwd_dir_length 0
 
-alias apt="apt --aur-helper=yay"
 alias dotfiles-git="/usr/bin/git --git-dir=$HOME/.dotfiles_git/ --work-tree=$HOME"
+alias activate-env=". $HOME/.local/bin/activate-env.fish"
+alias creactivate-env="create-env && activate-env"
+alias lord=". $HOME/.venv/lord/bin/activate.fish"
+alias tf=terraform
+
+activate-env
 
 if status --is-login
     # bass source /etc/profile
@@ -41,8 +47,14 @@ if status --is-login
     set -gx XKB_DEFAULT_LAYOUT fr
     set -gx XKB_DEFAULT_VARIANT latin1
 
+    set -gx MOZ_ENABLE_WAYLAND 1
+
+    # set -gx LC_ALL en_US.UTF-8
+
     set -gx EDITOR nvim
     set -gx AUR_HELPER yay
 
-    # set -gx LC_ALL en_US.UTF-8
-end
+    # set -gx MOUNT_CLOUD
+    set -gx AUTH_PATH "$HOME/.auth"
+    set -gx GOOGLE_APPLICATION_CREDENTIALS "$AUTH_PATH/google.json"
+    set -gx GITLAB_API_TOKEN (cat "$AUTH_PATH/gitlab_api_token")
