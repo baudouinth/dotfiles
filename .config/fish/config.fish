@@ -58,3 +58,4 @@ if status --is-login
     set -gx AUTH_PATH "$HOME/.auth"
     set -gx GOOGLE_APPLICATION_CREDENTIALS "$AUTH_PATH/google.json"
     set -gx GITLAB_API_TOKEN (cat "$AUTH_PATH/gitlab_api_token")
+end
