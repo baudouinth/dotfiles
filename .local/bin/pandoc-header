@@ -1,0 +1,19 @@
+#!/usr/bin/fish
+
+set current_date (date "+%-d %B %Y")
+
+echo "---
+title: 
+subtitle: 
+author: Baudouin Théobald
+date: $current_date
+numbersections: false
+geometry: margin=2cm
+mainfont: NotoSerif
+mainfontoptions:
+- Extension=.ttf
+- UprightFont=*-Regular
+- BoldFont=*-Bold
+- ItalicFont=*-Italic
+- BoldItalicFont=*-BoldItalic
+---"

@@ -26,8 +26,9 @@ set fish_color_command yellow
 set fish_color_param "#55ffff"
 set fish_prompt_pwd_dir_length 0
 
-alias apt="apt --aur-helper=yay"
+# alias apt="apt --aur-helper=yay"
 alias dotfiles-git="/usr/bin/git --git-dir=$HOME/.dotfiles_git/ --work-tree=$HOME"
+alias pandoc-gen="pandoc --pdf-engine xelatex --to pdf"
 
 if status --is-login
     # bass source /etc/profile

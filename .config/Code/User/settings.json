@@ -24,6 +24,10 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
     },
+    "[zig]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false,
+    },
     "autoDocstring.docstringFormat": "numpy",
     "editor.suggestSelection": "first",
     "python.languageServer": "Pylance",
@@ -31,7 +35,6 @@
     "git.enableSmartCommit": true,
     "jupyter.themeMatplotlibPlots": true,
     "window.autoDetectColorScheme": true,
-    "workbench.iconTheme": "vscode-icons",
     "explorer.autoReveal": false,
     "workbench.startupEditor": "newUntitledFile",
     "jupyter.widgetScriptSources": [
@@ -47,7 +50,13 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
     },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.formatOnType": true,
     "latex-utilities.message.update.show": false,
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
@@ -73,8 +82,19 @@
     "notebook.output.textLineLimit": 10000,
     "editor.inlayHints.enabled": "off",
     "debug.onTaskErrors": "showErrors",
-    "pandoc.pdfOptString": "--pdf-engine=xelatex",
     "python.analysis.autoImportCompletions": true,
     "editor.formatOnSaveMode": "file",
     "editor.formatOnSave": true,
+    "code-runner.executorMapByFileExtension": {
+        ".md": "fish -c 'pandoc-gen $fileName' > $fileNameWithoutExt.pdf"
+    },
+    "code-runner.ignoreSelection": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.path": "${projectRoot}/img",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.filePathConfirmInputBoxMode": "onlyName",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.format.semicolons": "insert",
+    "zig.zls.path": "/home/baudouin/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
 }
