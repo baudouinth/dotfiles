@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ENV_NAME=${PWD##*/}-env
-virtualenv --python=/usr/bin/python3.10 "$ENV_NAME"
+virtualenv --python=/usr/bin/python "$ENV_NAME"
