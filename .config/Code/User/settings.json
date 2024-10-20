@@ -18,7 +18,7 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "off"
     },
     "[rust]": {
         "editor.formatOnSave": true,
@@ -48,13 +48,13 @@
     },
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
         "editor.formatOnType": true,
         "editor.defaultFormatter": "ms-python.black-formatter",
     },
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
     "editor.formatOnType": true,
     "latex-utilities.message.update.show": false,
